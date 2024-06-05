@@ -2,7 +2,69 @@
     padding: 0;
     margin: 0;
 }
+body{
+    /* position: relative; */
+    align-items: center;
+    display: flex;
+    animation:ltrr 4s ease-in-out .5s;
+}
+.wrongIcon{
+    background-color: rgb(130, 7, 130);
+    width: 220px;
+    height: 220px;
+    align-items: center;
+    /* position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(50%); */
+    border-radius: 100%;
+  animation:ltrr 4s ease-in-out .5s;
+}
 
+.line1 {
+    width: 20px;
+    height: 200px;
+    background-color: tomato;
+    rotate: 60deg;
+    translate: 10px 0px;
+    animation: example1 .9s ease infinite;
+}
+.line2 {
+    width: 20px;
+    height: 200px;
+    background-color: tomato;
+    rotate: -60deg;
+    translate: -3px 0px;
+    animation: example2 .9s ease infinite;
+ 
+}
+@keyframes example1 {
+    0%   {background-color: red; 
+        rotate: 45deg; }
+   
+    100% {background-color: rgb(254, 3, 158); 
+        rotate: 405deg; }
+  }
+
+  @keyframes example2 {
+    0%   {background-color: red; 
+        rotate: -45deg; }
+   
+    100% {background-color: rgb(254, 3, 158); 
+        rotate: 315deg; }
+  }
+  @keyframes ltrr{
+    0%   { justify-content: start;}
+    25%  { justify-content: center; }
+    50%  {}
+    100% {justify-content: end; }
+  }
+
+
+/* .wrongIcon:hover .line1,
+.wrongIcon:hover .line2{
+    rotate: 1turn;
+} */
 .box1 {
     background-color: rgb(244, 63, 244);
     width: 300px;
