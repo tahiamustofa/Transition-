@@ -3,22 +3,22 @@
     margin: 0;
 }
 body{
-    /* position: relative; */
-    align-items: center;
+    
+   
     display: flex;
-    animation:ltrr 4s ease-in-out .5s;
+    position: relative;
 }
 .wrongIcon{
-    background-color: rgb(130, 7, 130);
+    background-color: rgb(227, 113, 227);
     width: 220px;
     height: 220px;
-    align-items: center;
-    /* position: absolute;
-    top: 50%;
+   
+     position: absolute; 
+  
     left: 0;
-    transform: translateY(50%); */
+   
     border-radius: 100%;
-  animation:ltrr 4s ease-in-out .5s;
+  animation:ltrr 7s ease-in-out .5s infinite;
 }
 
 .line1 {
@@ -38,6 +38,24 @@ body{
     animation: example2 .9s ease infinite;
  
 }
+.banner-one__shape-1 {
+    background-image: linear-gradient(40deg, #0db8ff 0%, #f332ff 100%);
+     box-shadow: 0px 20px 60px 0px rgba(141, 142, 255, 0.8);
+    width: 143px;
+    height: 143px;
+    top: 5%;
+    left: 3%;
+    -webkit-animation-duration: 8s;
+    animation-duration: 8s;
+    -webkit-perspective: 150px;
+    perspective: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 650px;
+    left: 100px;
+    animation:shape1 6s ease-in infinite;
+}
+
 @keyframes example1 {
     0%   {background-color: red; 
         rotate: 45deg; }
@@ -54,10 +72,26 @@ body{
         rotate: 315deg; }
   }
   @keyframes ltrr{
-    0%   { justify-content: start;}
-    25%  { justify-content: center; }
-    50%  {}
-    100% {justify-content: end; }
+    0%   { 
+        left: 0;
+    }
+    25%  { 
+        left: 50%;
+        background-color: rgb(254, 250, 3);
+     }
+    50% {
+        left: 100%;
+       transform:translate(-100%,0%);
+       background-color: rgb(254, 3, 62);
+    }
+    75%  { 
+        left: 50%;
+        background-color: yellowgreen;
+     }
+    100% {
+        left: 0;
+        background-color: palegreen;
+     }
   }
 
 
@@ -65,62 +99,3 @@ body{
 .wrongIcon:hover .line2{
     rotate: 1turn;
 } */
-.box1 {
-    background-color: rgb(244, 63, 244);
-    width: 300px;
-    height: 300px;
-    margin: 100px auto;
-    /* transition-property:all;
-     transition-duration: .5s;
-     transition-timing-function: ease; */
-    transition: all 3.5s ease 2s;
-    overflow: hidden;
-    /* transition:1.9s; */
-}
-
-.box1:hover .yellow {
-    transform: translateX(0px);
-}
-
-.box1:hover {
-    /* transform:translateX(0); */
-    /* transform: scale(2,1) rotate(60deg); */
-    /* transform: skew(50deg); */
-}
-
-
-
-.yellow {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(247, 255, 4);
-    transform: translateX(300px) rotate(60deg);
-    transition: all .9s ease .2s;
-}
-
-
-
-.box2 {
-    width: 300px;
-    height: 300px;
-    background-color: chartreuse;
-    margin: 40px auto;
-    position: relative;
-    overflow: hidden;
-}
-
-.box2:hover::after {
-    transform: translateX(0px);
-}
-
-.box2::after {
-    content: ' ';
-    background-color: coral;
-    width: 100%;
-    height: 100%;
-    transform: translateX(300px) rotate(90deg);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .9s ease .5s;
-}
